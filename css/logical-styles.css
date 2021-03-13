@@ -30,53 +30,63 @@
 
 :root{
   font-size:18px;
-  --colortext1:#212121;
-  --colortext2:#616161;
+  --white1:white;
+  --white2: #A5A3A5;
+  --white3:#3A3539;
  
 }
 
 body {
-  color: var(--colortext1);
+  color: var(--white1);
   font-size: 16px;
-  /* font-family: charter; */
-  font-family: 'Roboto', sans-serif;
-  
+  font-family: 'nunito', sans-serif;
+  background: #251F24;
+  ;
 }
 
 .fondo{
-  background-image:linear-gradient(to top,rgba(255,255,255,.3), transparent), url(../img/pattern.png);
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
   height: 350px;
 
 }
 
 a {
-  color: var(--colortext1);
+  color: var(--white1);
 }
 header{
   font-size:14px;
-  color: var(--colortext2);
+  color: var(--white1);
+}
+header li {
+  color: var(--white2);
 }
 header a{
-  color: var(--colortext2);
+  color: var(--white2);
   text-decoration: none;
 }
 header a:hover{
-  color: var(--colortext1);
+  color: var(--white1);
 }
 nav details summary{
   font-weight: bold;
 }
-
+h1, h2, h3 {
+  font-weight:normal;
+}
 h1 {
   font-size: 60px;
-  /* font-size:3.75em; */
+ 
 }
 h2{
   font-size:2em;
+ 
 }
 h3{
   font-size:1.5em;
 
+}
+p{
+  color: var(--white2);
 }
 .section-content {
   counter-reset: titleList;
@@ -92,10 +102,10 @@ h3{
   content:'';
   width: 32px;
   height:4px;
-  background: var(--colortext1);
+  background: var(--white1);
   display:inline-block;
 }
 
 pre{
-  background: #FEC62E;
+  background: var(--white3);
 }
