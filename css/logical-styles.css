@@ -117,6 +117,7 @@ p {
   counter-increment: titleList;
 }
 
+
 .section-content h3::before {
   content: counter(titleList, decimal) ". ";
 }
@@ -181,3 +182,39 @@ blockquote p{
 .main-content{
   padding-inline: 16px;
 }
+
+.slider-container{
+  display: block;
+  overflow: hidden;
+  /* block-size: 100px; */
+  scroll-behavior: smooth;
+  white-space:nowrap;
+  font-size: 0;
+}
+.video{
+  margin: 0;
+  display: inline-block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/9;
+}
+.slider-bullet-list{
+  text-align: center;
+  margin-block-start: 10px;
+  
+}
+.slider-bullet{
+  display:inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: var(--white2);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+/* 
+.img-profile{
+  max-inline-size: 100% ; 
+}*/
