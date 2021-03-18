@@ -29,8 +29,9 @@
   --white1: white;
   --white2: #a5a3a5;
   --white3: #3a3539;
+  --white4: #251f24;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -43,31 +44,33 @@ body {
 
 .fondo {
   background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
-  height: 350px;
+  block-size: 50px;
 }
 
 a {
   color: var(--white1);
 }
-.header{
-  position: sticky;
-  inset-block-start: -45px;
+.header {
+  /* position: sticky;
+  inset-block-start: -45px; */
 }
-.header-content{
-  position: relative;
-  inset-block-start: 65px;
+.header-content {
+  /* position: relative;
+  inset-block-start: 65px; */
+  padding-inline: 20px;
 }
 header {
   font-size: 14px;
   color: var(--white1);
-  position: absolute;
+  margin-block-start: 20px;
+  /* position: absolute; */
   /* top */
-  inset-block-start: 0;
+  /* inset-block-start: 0; */
   /* bottom */
   /* inset-block-end: ; */
   /* left */
-  inset-inline-start: -208px;
-  inline-size: 188px;
+  /* inset-inline-start: -208px;
+  inline-size: 188px; */
 }
 header li {
   color: var(--white2);
@@ -85,8 +88,8 @@ nav details summary {
 }
 
 h1 {
-  font-size: 60px;
-  margin-block-start: 64px;
+  font-size: 40px;
+  margin-block-start: 20px;
   margin-block-end: 16px;
 }
 h2 {
@@ -117,7 +120,6 @@ p {
   counter-increment: titleList;
 }
 
-
 .section-content h3::before {
   content: counter(titleList, decimal) ". ";
 }
@@ -139,72 +141,66 @@ pre {
   color: var(--white1);
   padding: 40px;
   overflow: auto;
-  border: 10px solid #5551FF;
+  border: 10px solid #5551ff;
   box-shadow: -10px 10px 0 0 #abaaf6;
-
 }
 
 blockquote {
   margin-block-start: 80px;
   margin-block-end: 63px;
   background: var(--white3);
-  line-height:32px;
+  line-height: 32px;
   font: size 24px;
   border-radius: 8px;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
   padding-inline-end: 24px;
   padding-inline-start: 24px;
   padding-block-start: 24px;
   padding-block-end: 24px;
 }
-blockquote p{
+blockquote p {
   color: var(--white1);
-  
 }
 .main hr {
   display: none;
-
 }
 
-  .main{
-    
+.main {
 }
 
-.wrapper{
-
+.wrapper {
   max-inline-size: 902px;
 
   margin: auto;
 }
-.main-content{
+.main-content {
   padding-inline: 16px;
 }
 
-.slider-container{
+.slider-container {
   display: block;
   overflow: hidden;
   /* block-size: 100px; */
   scroll-behavior: smooth;
-  white-space:nowrap;
+  white-space: nowrap;
   font-size: 0;
 }
-.video{
+.video {
   margin: 0;
   display: inline-block;
-  width:100%;
-  height:auto;
-  aspect-ratio:16/9;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
 }
-.slider-bullet-list{
+.slider-bullet-list {
   text-align: center;
   margin-block-start: 10px;
-  
 }
-.slider-bullet{
-  display:inline-block;
+.slider-bullet {
+  display: inline-block;
   inline-size: 15px;
   block-size: 15px;
   background: var(--white2);
@@ -214,7 +210,56 @@ blockquote p{
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-/* 
-.img-profile{
-  max-inline-size: 100% ; 
-}*/
+.form input {
+  inline-size: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--white1);
+  background: var(--white4);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white1);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+  outline: none;
+}
+.form input::placeholder {
+  color: var(--white2);
+}
+.form input:focus {
+  border: 1px solid #157efb;
+}
+.form input[type="submit"] {
+  background: #157efb;
+  border: none;
+}
+/* media queries */
+@media screen and (min-width: 1300px){
+  .fondo{
+    block-size: 350px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+    padding-inline: 0;
+  }
+  .header-content {
+    position: relative;
+    inset-block-start: 65px;
+  }
+  header {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -208px;
+    inline-size: 188px;
+  }
+  h1{
+    font-size:60px;
+    margin-block-start: 64px;
+  }
+}
